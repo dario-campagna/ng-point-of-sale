@@ -1,5 +1,5 @@
-import {POSComponent} from "./pos-component";
-import {ProductScanComponent} from "./product-scan-component";
+import {POSComponent} from "./components/pos-component";
+import {ProductScanComponent} from "./components/product-scan-component";
 
 angular.module('posApp', [])
     .component('pointOfSale', new POSComponent())
