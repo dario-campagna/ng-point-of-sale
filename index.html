@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Point of Sale</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- libs:js -->
+    <!-- libs -->
+
+    <!-- Configure SystemJS -->
+    <script>
+        System.config({
+            packages: {
+                app: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
+            }
+        });
+        System.import('app/boot')
+                .then(null, console.error.bind(console));
+    </script>
+
+    <!-- bundle:js -->
+    <!-- bundle -->
+
+</head>
+
+<!-- Display the application -->
+<body>
+<point-of-sale></point-of-sale>
+</body>
+
+</html>
