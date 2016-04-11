@@ -1,6 +1,6 @@
 import 'angular';
 import 'angular-mocks';
-import '../app/boot';
+import '../../app/boot';
 
 describe('pointOfSale', () => {
 
