@@ -2,7 +2,7 @@ import 'angular';
 import 'angular-mocks';
 import '../../app/boot';
 
-describe('pointOfSale', () => {
+describe('pos-component', () => {
 
     let element:ng.IAugmentedJQuery, scope:any;
 

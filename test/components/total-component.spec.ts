@@ -2,7 +2,7 @@ import 'angular';
 import 'angular-mocks';
 import '../../app/boot';
 
-describe('pointOfSale', () => {
+describe('total-component', () => {
 
     let element:ng.IAugmentedJQuery, scope:any;
 
@@ -14,7 +14,7 @@ describe('pointOfSale', () => {
         $compile(element)(scope);
     }));
 
-    it('Should show header', () => {
+    it('Should show button', () => {
         scope.$digest();
         let button:ng.IAugmentedJQuery = element.find('button');
         expect(button.text()).toBe('Total');

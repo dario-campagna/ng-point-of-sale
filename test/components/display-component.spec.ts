@@ -2,7 +2,7 @@ import 'angular';
 import 'angular-mocks';
 import '../../app/boot';
 
-describe('pointOfSale', () => {
+describe('display-component', () => {
 
     let element:ng.IAugmentedJQuery, scope:any;
 
@@ -14,7 +14,7 @@ describe('pointOfSale', () => {
         $compile(element)(scope);
     }));
 
-    it('Should show header', () => {
+    it('Should show readonly input', () => {
         scope.$digest();
         let input:ng.IAugmentedJQuery = element.find('input');
         expect(input).toBeDefined();
