@@ -1,13 +1,22 @@
+import {AngularDisplay} from "../adapters/angular-display";
+import {PointOfSale} from "../domain/point-of-sale";
+
 export class POSController {
 
-    private _message:string;
+    private _display:AngularDisplay;
+    private _pointOfSale:PointOfSale;
+
+    constructor() {
+        this._display = new AngularDisplay();
+        this._pointOfSale = new PointOfSale(this._display);
+    }
 
     public scanProduct(barCode:string):void {
-        this._message = barCode + ' NOT EXISTS!';
+        this._pointOfSale.onScannedProduct(barCode);
     }
 
     public getMessage():string {
-        return this._message;
+        return this._display.getMessage();
     }
 
 }
