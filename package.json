@@ -18,9 +18,13 @@
     "karma": "^0.13.19",
     "karma-chrome-launcher": "^0.2.2",
     "karma-jasmine": "^0.3.6",
+    "karma-sourcemap-loader": "^0.3.7",
     "karma-systemjs": "^0.10.0",
     "systemjs": "^0.19.13",
     "systemjs-builder": "^0.15.7",
     "tsconfig-glob": "^0.3.3"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
   }
 }

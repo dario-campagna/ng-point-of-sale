@@ -31,6 +31,10 @@ module.exports = function (config) {
 
         reporters: ['progress'],
 
+        preprocessors: {
+            'dist/**/*.js': ['sourcemap']
+        },
+
         port: 9876,
 
         colors: true,
