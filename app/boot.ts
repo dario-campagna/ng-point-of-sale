@@ -5,7 +5,10 @@ angular.module('posApp', [])
     .component('pointOfSale', new POSComponent())
     .component('productScan', new ProductScanComponent())
     .component('display', {
-        template: '<input class="form-control" type="text" readonly>'
+        bindings: {
+            message: '<'
+        },
+        template: '<input class="form-control" type="text" readonly ng-model="$ctrl.message">'
     })
     .component('total', {
         template: '<button type="button" class="btn btn-primary btn-block">Total</button>'
