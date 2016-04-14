@@ -8,6 +8,7 @@ describe('point-of-sale', () => {
     let display:Display;
     let catalog:Catalog;
     let pointOfSale:PointOfSale;
+    let cart;
 
     beforeEach(() => {
         display = {
@@ -19,11 +20,11 @@ describe('point-of-sale', () => {
                 return null;
             }
         };
-        pointOfSale = new PointOfSale(display, catalog);
+        cart = [];
+        pointOfSale = new PointOfSale(display, catalog, cart);
     });
 
     it('show message when scanned product not exists', () => {
-        let pointOfSale:PointOfSale = new PointOfSale(display, catalog);
         pointOfSale.onScannedProduct('a');
         expect(display.showNotExists).toHaveBeenCalledWith('a');
     });
@@ -32,6 +33,18 @@ describe('point-of-sale', () => {
         spyOn(catalog, 'findBy').and.returnValue(new Money((1)));
         pointOfSale.onScannedProduct('b');
         expect(display.showProductPrice).toHaveBeenCalledWith(new Money(1));
+    });
+
+    it('show 0 when no existing product scanned', () => {
+        pointOfSale.onTotalRequested();
+        expect(display.showProductPrice).toHaveBeenCalledWith(new Money(0));
+    });
+
+    it('show total when some existing product scanned', () => {
+        cart.push(new Money(1));
+        cart.push(new Money(2));
+        pointOfSale.onTotalRequested();
+        expect(display.showProductPrice).toHaveBeenCalledWith(new Money(3));
     });
 
 });

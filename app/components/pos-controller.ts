@@ -12,7 +12,7 @@ export class POSController {
     constructor() {
         this._display = new AngularDisplay();
         this._catalog = new InMemoryCatalog({'a': 1});
-        this._pointOfSale = new PointOfSale(this._display, this._catalog);
+        this._pointOfSale = new PointOfSale(this._display, this._catalog, []);
     }
 
     public scanProduct(barCode:string):void {

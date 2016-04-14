@@ -4,12 +4,14 @@ import {Catalog} from "./ports/catalog";
 
 export class PointOfSale {
 
-    private _display;
-    private _catalog;
+    private _display:Display;
+    private _catalog:Catalog;
+    private _cart:Array<Money>;
 
-    constructor(display:Display, catalog:Catalog) {
+    constructor(display:Display, catalog:Catalog, cart:Array<Money>) {
         this._display = display;
         this._catalog = catalog;
+        this._cart = cart;
     }
 
     public onScannedProduct(barCode:string):void {
@@ -20,5 +22,15 @@ export class PointOfSale {
             this._display.showNotExists(barCode);
         }
     }
+
+    public onTotalRequested():void {
+        let total = this._cart.reduce(
+            (total:Money, price:Money) => {
+                return total.add(price);
+            },
+            new Money(0));
+        this._display.showProductPrice(total);
+    }
+
 
 }
