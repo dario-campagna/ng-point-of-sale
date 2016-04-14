@@ -33,6 +33,8 @@ describe('point-of-sale', () => {
         spyOn(catalog, 'findBy').and.returnValue(new Money((1)));
         pointOfSale.onScannedProduct('b');
         expect(display.showProductPrice).toHaveBeenCalledWith(new Money(1));
+        expect(cart.length).toBe(1);
+        expect(cart[0]).toEqual(new Money(1));
     });
 
     it('show 0 when no existing product scanned', () => {

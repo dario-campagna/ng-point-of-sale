@@ -23,4 +23,9 @@ export class POSController {
         return this._display.getMessage();
     }
 
+    public computeTotal():void {
+        this._pointOfSale.onTotalRequested();
+    }
+
+
 }

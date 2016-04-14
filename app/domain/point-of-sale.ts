@@ -17,6 +17,7 @@ export class PointOfSale {
     public onScannedProduct(barCode:string):void {
         var price = this._catalog.findBy(barCode);
         if (price) {
+            this._cart.push(price);
             this._display.showProductPrice(price);
         } else {
             this._display.showNotExists(barCode);

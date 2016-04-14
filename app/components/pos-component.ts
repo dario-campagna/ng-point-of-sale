@@ -19,7 +19,7 @@ export class POSComponent implements ng.IComponentOptions {
                 </div>
                 <div class="row panel-body">
                     <div class="col-md-12">
-                        <total></total>
+                        <total on-total-requested="$ctrl.computeTotal()"></total>
                     </div>
                 </div>
             </div>

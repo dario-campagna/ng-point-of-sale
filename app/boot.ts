@@ -11,7 +11,10 @@ angular.module('posApp', [])
         template: '<input class="form-control" type="text" readonly ng-model="$ctrl.message">'
     })
     .component('total', {
-        template: '<button type="button" class="btn btn-primary btn-block">Total</button>'
+        bindings: {
+            onTotalRequested: '&'
+        },
+        template: '<button type="button" class="btn btn-primary btn-block" ng-click="$ctrl.onTotalRequested()">Total</button>'
     });
 
 angular.element(document).ready(function () {
