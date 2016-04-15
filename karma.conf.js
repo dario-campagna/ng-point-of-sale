@@ -30,6 +30,8 @@ module.exports = function (config) {
         frameworks: ['systemjs', 'jasmine'],
 
         reporters: ['progress'],
+        
+        browsers: ['PhantomJS'],
 
         preprocessors: {
             'dist/**/*.js': ['sourcemap']
@@ -42,8 +44,6 @@ module.exports = function (config) {
         logLevel: config.LOG_INFO,
 
         autoWatch: true,
-
-        browsers: ['Chrome'],
 
         singleRun: false
     });

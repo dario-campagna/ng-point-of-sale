@@ -126,7 +126,8 @@ gulp.task('serve', ['build'], function () {
     browserSync({
         server: {
             baseDir: 'dist'
-        }
+        },
+        port: 8080
     });
 
     gulp.watch(['app/**/*', 'index.html'], ['_buildAndReload']);
