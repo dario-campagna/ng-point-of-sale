@@ -9,9 +9,9 @@ export class POSController {
     private _catalog:Catalog;
     private _pointOfSale:PointOfSale;
 
-    constructor() {
+    constructor($http) {
         this._display = new AngularDisplay();
-        this._catalog = new InMemoryCatalog({'a': 1});
+        this._catalog = new InMemoryCatalog($http);
         this._pointOfSale = new PointOfSale(this._display, this._catalog, []);
     }
 

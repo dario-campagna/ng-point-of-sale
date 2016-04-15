@@ -8,9 +8,10 @@ describe('pos-component', () => {
 
     beforeEach(angular.mock.module('posApp'));
 
-    beforeEach(angular.mock.inject(($rootScope:any, $compile:ng.ICompileService) => {
+    beforeEach(angular.mock.inject(($rootScope:any, $compile:ng.ICompileService, $httpBackend:ng.IHttpBackendService) => {
         scope = $rootScope.$new();
         element = angular.element('<point-of-sale></point-of-sale>');
+        $httpBackend.expectGET('/catalog').respond(404);
         $compile(element)(scope);
     }));
 

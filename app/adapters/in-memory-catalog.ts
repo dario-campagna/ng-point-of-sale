@@ -5,8 +5,15 @@ export class InMemoryCatalog implements Catalog {
 
     private _productMap:any;
 
-    constructor(productMap:any) {
-        this._productMap = productMap;
+    constructor($http:ng.IHttpService) {
+        $http.get('/catalog').then(
+            (response) => {
+                this._productMap = response.data;
+            },
+            () => {
+                this._productMap = {};
+            }
+        );
     }
 
     public findBy(barCode:string):Money {
