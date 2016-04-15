@@ -13,6 +13,6 @@ app.get('/catalog', function (req, res) {
 
 app.use(express.static('dist'));
 
-app.listen(3000, function() {
+app.listen(8080, function() {
     console.log('Point of Sale listening on port 3000!');
 });
