@@ -22,7 +22,8 @@ module.exports = function (config) {
                     'angular-mocks': 'node_modules/angular-mocks/angular-mocks.js',
                     'es6-module-loader': 'node_modules/es6-module-loader/dist/es6-module-loader.js',
                     'systemjs': 'node_modules/systemjs/dist/system.js',
-                    'system-polyfills': 'node_modules/systemjs/dist/system-polyfills.js'
+                    'system-polyfills': 'node_modules/systemjs/dist/system-polyfills.js',
+                    'phantomjs-polyfill': 'node_modules/phantomjs-polyfill/bind-polyfill.js'
                 }
             }
         },
