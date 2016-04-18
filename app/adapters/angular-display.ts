@@ -5,16 +5,15 @@ export class AngularDisplay implements Display {
 
     private _message:string;
 
-    public showNotExists(barCode:string) {
+    public showNotExists(barCode:string):void {
         this._message = barCode + ' NOT EXISTS!';
     }
 
-
-    public showProductPrice(money:Money) {
-        this._message = money.getAmount().toString();
+    public showProductPrice(money:Money):void {
+        this._message = money.amount.toString();
     }
 
-    public getMessage():string {
+    get message():string {
         return this._message;
     }
 

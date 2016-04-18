@@ -2,6 +2,6 @@ import {Money} from "../money";
 
 export interface Catalog {
 
-    findBy(barCode:string):Money;
+    findBy: (barCode:string) => Money;
 
 }

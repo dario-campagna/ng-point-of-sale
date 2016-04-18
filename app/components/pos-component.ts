@@ -1,7 +1,7 @@
 import {POSController} from "./pos-controller";
 export class POSComponent implements ng.IComponentOptions {
 
-    public controller;
+    public controller:any;
     public template:string;
 
     constructor() {

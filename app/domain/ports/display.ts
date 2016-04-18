@@ -2,8 +2,8 @@ import {Money} from "../money";
 
 export interface Display {
 
-    showNotExists(barCode:string);
+    showNotExists: (barCode:string) => void;
 
-    showProductPrice(money:Money);
+    showProductPrice: (money:Money) => void;
 
 }

@@ -12,12 +12,12 @@ describe('angular-display', () => {
 
     it('show not exists message', () => {
         angularDisplay.showNotExists('a');
-        expect(angularDisplay.getMessage()).toBe('a NOT EXISTS!');
+        expect(angularDisplay.message).toBe('a NOT EXISTS!');
     });
 
     it('show product price', () => {
         angularDisplay.showProductPrice(new Money(1));
-        expect(angularDisplay.getMessage()).toBe("1");
+        expect(angularDisplay.message).toBe("1");
     });
 
 });

@@ -20,7 +20,7 @@ export class POSController {
     }
 
     public getMessage():string {
-        return this._display.getMessage();
+        return this._display.message;
     }
 
     public computeTotal():void {

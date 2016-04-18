@@ -6,12 +6,12 @@ export class Money {
         this._amount = amount;
     }
 
-    public getAmount():number {
+    get amount():number {
         return this._amount;
     }
 
     public add(money:Money):Money {
-        return new Money(this._amount + money.getAmount());
+        return new Money(this._amount + money.amount);
     }
 
 }
