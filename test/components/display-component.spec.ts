@@ -4,7 +4,8 @@ import '../../app/boot';
 
 describe('display-component', () => {
 
-    let element:ng.IAugmentedJQuery, scope:any;
+    let element:ng.IAugmentedJQuery;
+    let scope:any;
 
     beforeEach(angular.mock.module('posApp'));
 
