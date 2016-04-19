@@ -1,6 +1,8 @@
-import {Money} from "../money";
+import Money from "../money";
 
-export interface Display {
+export default Display;
+
+interface Display {
 
     showNotExists: (barCode:string) => void;
 

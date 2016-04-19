@@ -1,9 +1,9 @@
-import {AngularDisplay} from "../adapters/angular-display";
-import {PointOfSale} from "../domain/point-of-sale";
-import {Catalog} from "../domain/ports/catalog";
-import {InMemoryCatalog} from "../adapters/in-memory-catalog";
+import AngularDisplay from "../adapters/angular-display";
+import PointOfSale from "../domain/point-of-sale";
+import Catalog from "../domain/ports/catalog";
+import InMemoryCatalog from "../adapters/in-memory-catalog";
 
-export class POSController {
+export default class POSController {
 
     private _display:AngularDisplay;
     private _catalog:Catalog;

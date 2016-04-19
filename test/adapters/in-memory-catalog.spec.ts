@@ -1,7 +1,7 @@
 import 'angular'
 import 'angular-mocks'
-import {InMemoryCatalog} from "../../app/adapters/in-memory-catalog";
-import {Money} from "../../app/domain/money";
+import InMemoryCatalog from "../../app/adapters/in-memory-catalog";
+import Money from "../../app/domain/money";
 
 describe('in-memory-catalog', () => {
 

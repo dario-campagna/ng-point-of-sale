@@ -1,4 +1,4 @@
-import {Money} from "../../app/domain/money";
+import Money from "../../app/domain/money";
 
 describe('money', () => {
 

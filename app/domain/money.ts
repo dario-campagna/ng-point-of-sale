@@ -1,4 +1,4 @@
-export class Money {
+export default class Money {
 
     private _amount:number;
 

@@ -1,6 +1,6 @@
-import {Display} from "../../app/domain/ports/display";
-import {AngularDisplay} from "../../app/adapters/angular-display";
-import {Money} from "../../app/domain/money";
+import Display from "../../app/domain/ports/display";
+import AngularDisplay from "../../app/adapters/angular-display";
+import Money from "../../app/domain/money";
 
 describe('angular-display', () => {
 

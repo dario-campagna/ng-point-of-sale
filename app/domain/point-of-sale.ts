@@ -1,8 +1,8 @@
-import {Display} from "./ports/display";
-import {Money} from "./money";
-import {Catalog} from "./ports/catalog";
+import Display from "./ports/display";
+import Money from "./money";
+import Catalog from "./ports/catalog";
 
-export class PointOfSale {
+export default class PointOfSale {
 
     private _display:Display;
     private _catalog:Catalog;

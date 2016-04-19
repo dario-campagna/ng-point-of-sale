@@ -1,7 +1,7 @@
-import {Display} from "../domain/ports/display";
-import {Money} from "../domain/money";
+import Display from "../domain/ports/display";
+import Money from "../domain/money";
 
-export class AngularDisplay implements Display {
+export default class AngularDisplay implements Display {
 
     private _message:string;
 

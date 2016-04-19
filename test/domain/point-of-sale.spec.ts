@@ -1,7 +1,7 @@
-import {PointOfSale} from "../../app/domain/point-of-sale";
-import {Display} from "../../app/domain/ports/display";
-import {Money} from "../../app/domain/money";
-import {Catalog} from "../../app/domain/ports/catalog";
+import PointOfSale from "../../app/domain/point-of-sale";
+import Display from "../../app/domain/ports/display";
+import Money from "../../app/domain/money";
+import Catalog from "../../app/domain/ports/catalog";
 
 describe('point-of-sale', () => {
 
