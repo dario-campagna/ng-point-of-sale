@@ -1,4 +1,4 @@
-export class ProductScanComponent implements ng.IComponentOptions {
+export default class ProductScanComponent implements ng.IComponentOptions {
 
     public template;
 

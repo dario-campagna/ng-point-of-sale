@@ -1,4 +1,4 @@
-export class POSComponent implements ng.IComponentOptions {
+export default class POSComponent implements ng.IComponentOptions {
 
     public template:string;
 
