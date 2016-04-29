@@ -10,7 +10,8 @@ describe('total-component', () => {
 
     beforeEach(angular.mock.inject(($rootScope:any, $compile:ng.ICompileService) => {
         scope = $rootScope.$new();
-        element = angular.element('<total></total>');
+        scope.computeTotal = jasmine.createSpy('computeTotalSpy');
+        element = angular.element('<total on-total-requested="computeTotal()"></total>');
         $compile(element)(scope);
     }));
 
@@ -18,6 +19,12 @@ describe('total-component', () => {
         scope.$digest();
         let button:ng.IAugmentedJQuery = element.find('button');
         expect(button.text()).toBe('Total');
+    });
+
+    it('invoke callback on button click', () => {
+        scope.$digest();
+        element.find('button').triggerHandler('click');
+        expect(scope.computeTotal).toHaveBeenCalled();
     });
 
 });

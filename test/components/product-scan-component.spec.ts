@@ -10,7 +10,7 @@ describe('product-scan-component', () => {
 
     beforeEach(angular.mock.inject(($rootScope:any, $compile:ng.ICompileService) => {
         scope = $rootScope.$new();
-        element = angular.element('<product-scan></product-scan>');
+        element = angular.element('<product-scan on-scan="scanProduct(barCode)"></product-scan>');
         $compile(element)(scope);
     }));
 
@@ -20,6 +20,14 @@ describe('product-scan-component', () => {
         expect(input).toBeDefined();
         let button:ng.IAugmentedJQuery = element.find('button');
         expect(button.text()).toBe('Scan');
+    });
+
+    it('should invoke callback on Scan click', () => {
+        scope.scanProduct = jasmine.createSpy('scanSpy');
+        scope.$digest();
+        element.find('input').controller('ngModel').$setViewValue('a');
+        element.find('button').triggerHandler('click');
+        expect(scope.scanProduct).toHaveBeenCalledWith('a');
     });
 
 });
