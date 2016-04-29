@@ -52,6 +52,10 @@ To see the app run and have `.ts` file recompiled upon changes (with the additio
 
 `gulp serve`.
 
+To run the app with a back-end implementing a REST endpoint to retrieve product prices, use the following command:
+
+`node express/app.js`
+
 ### Production
 
 The `build_prod` task generates a (minified) `bundle.js` file from the compiled `.ts` files by using the SystemJS builder. The generated file is output in the `prod` directory. The task also copies in the `prod` directory the necessary libraries and static assets. Run with:
